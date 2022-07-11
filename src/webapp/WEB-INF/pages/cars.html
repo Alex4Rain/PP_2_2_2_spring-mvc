@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table border="1" align="center">
+    <thead>
+    <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Registration Number</th>
+    </tr>
+    </thead>
+    <tr th:each = "cr, iterStat : ${cars}">
+        <td th:text = "${cr.brand}"></td>
+        <td th:text = "${cr.model}"></td>
+        <td th:text = "${cr.registrationPlate}"></td>
+    </tr>
+    <tbody>
+    </tbody>
+</table>
+
+</body>
+</html>
